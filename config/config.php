@@ -1,4 +1,5 @@
 <?php
+    date_default_timezone_set("America/Bogota");
     const BASE_URL = "http://localhost/SMN947-PM/";
     const DB_HOST = "localhost";
     const DB_NAME = "smn947-pm";
