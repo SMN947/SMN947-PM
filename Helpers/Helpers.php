@@ -29,12 +29,7 @@
         return $tkn;
     }
 
-    function page_header($data = "") {
-        $view = "Views/Template/header.php";
-        require_once($view);
-    }
-
-    function page_footer($data = "") {
-        $view = "Views/Template/footer.php";
+    function load_template($section = "", $data) {
+        $view = "Views/Template/".$section.".php";
         require_once($view);
     }
