@@ -28,3 +28,13 @@
         $tkn = $r1.'-'.$r2.'-'.$r3.'-'.$r4;
         return $tkn;
     }
+
+    function page_header($data = "") {
+        $view = "Views/Template/header.php";
+        require_once($view);
+    }
+
+    function page_footer($data = "") {
+        $view = "Views/Template/footer.php";
+        require_once($view);
+    }
