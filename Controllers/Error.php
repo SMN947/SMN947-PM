@@ -5,7 +5,9 @@
         }
 
         public function notFound() {
-            $this->views->getView($this, "error");
+            $data["page_title"] = "Error Page";
+            $data["page_path"] = "Home/Error";
+            $this->views->getView($this, "error", $data);
         } 
     }
 
