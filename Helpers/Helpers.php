@@ -33,3 +33,7 @@
         $view = "Views/Template/".$section.".php";
         require_once($view);
     }
+
+    function JsPrint($text) {
+        echo "<script>console.log('".$text."')</script>";
+    }
