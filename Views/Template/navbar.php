@@ -23,7 +23,7 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="<?= BASE_URL ?>/logout">
+        <a class="nav-link" href="<?= BASE_URL ?>/session/logout">
             <i class="fas fa-power-off"></i>
             Logout
         </a>
