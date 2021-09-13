@@ -14,9 +14,21 @@
 
     <!-- Right navbar links -->
     <ul class="navbar-nav ml-auto">
-      <li class="nav-item">
-          <li class="breadcrumb-item active"><a href="#"><?= $data["page_path"] ?></a></li>
-      </li>
+
+    <li class="nav-item">
+        <a class="nav-link">
+            <i class="fas fa-plus"></i>
+            Create project
+        </a>
+    </li>
+
+    <li class="nav-item">
+        <a class="nav-link" href="<?= BASE_URL ?>/logout">
+            <i class="fas fa-power-off"></i>
+            Logout
+        </a>
+    </li>
+
     </ul>
   </nav>
   <!-- /.navbar -->
