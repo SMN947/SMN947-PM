@@ -1,3 +1,8 @@
 .error-page {
     margin-top: 30%;
 }
+pre {
+    font-size: 10px;
+    padding: 0px;
+    border: solid 1px black;
+}
