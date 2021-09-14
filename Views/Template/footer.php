@@ -19,5 +19,7 @@
 <script src="<?= SCRIPTS ?>/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
 <script src="<?= SCRIPTS ?>/adminlte.min.js"></script>
+<!-- Custom Js -->
+<script src="<?= SCRIPTS ?>/main.js"></script>
 </body>
 </html>

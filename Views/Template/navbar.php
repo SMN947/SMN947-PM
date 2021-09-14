@@ -16,7 +16,7 @@
     <ul class="navbar-nav ml-auto">
 
     <li class="nav-item">
-        <a class="nav-link">
+        <a class="nav-link clinfo" href="<?= BASE_URL ?>/project/create#Project Creation Form"  data-toggle="modal" data-target="#exampleModal">
             <i class="fas fa-plus"></i>
             Create project
         </a>
@@ -32,3 +32,4 @@
     </ul>
   </nav>
   <!-- /.navbar -->
+  <br>
