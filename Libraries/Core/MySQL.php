@@ -27,7 +27,8 @@
             $this->strQuery = $query;
             $result = $this->conection->prepare($this->strQuery);
             $result->execute();
-            $data = $result->fetch(PDO::FETCH_ASSOC);
+                $data["len"] = $result->rowCount();
+                $data["data"] = $result->fetch(PDO::FETCH_ASSOC);
             return $data;
         }
 
