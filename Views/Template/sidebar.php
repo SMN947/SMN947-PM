@@ -14,7 +14,7 @@
           <img src="<?= IMAGES ?>/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="<?= BASE_URL ?>/profile" class="d-block">USERNAME</a>
+          <a href="<?= BASE_URL ?>/profile" class="d-block"><?= $_SESSION["session_user"]["profile"]["data"]["user_name"] ?></a>
         </div>
       </div>
 
