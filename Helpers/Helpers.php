@@ -34,6 +34,11 @@
         require_once($view);
     }
 
-    function JsPrint($text) {
-        echo "<script>console.log('".$text."')</script>";
+    function JsPrint($text, $json = 0) {
+        if($json == 0) {
+            echo "<script>console.log('".$text."')</script>";
+        }else{
+            echo "<script>console.log(JSON.parse('".$text."'))</script>";
+        }
+        
     }
