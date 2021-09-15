@@ -10,7 +10,7 @@
         }
         public function getProjectsByUser(int $id) {
             $query = "select * from projects where project_user_creator = $id";
-            $req = $this->select($query);
+            $req = $this->select_all($query);
             return $req;
         }
     }
