@@ -3,12 +3,12 @@
   <div class="card-body">
     <p class="login-box-msg">Sign in to start your session</p>
 
-    <form action="<?= BASE_URL ?>/project/create_save" method="get">
+    <form action="<?= BASE_URL ?>/project/create_save/" method="get">
       <div class="input-group mb-3">
-        <input type="email" class="form-control" placeholder="Project Name">
+        <input name="project-name" type="text" class="form-control" placeholder="Project Name">
       </div>
       <div class="input-group mb-3">
-        <input type="password" class="form-control" placeholder="Project Description">
+        <input name="project-desc" type="text" class="form-control" placeholder="Project Description">
       </div>
       <div class="row">
         <!-- /.col -->
