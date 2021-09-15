@@ -3,14 +3,8 @@
         public function __construct() {
             parent::__construct();
         }
-        public function setUser(string $a, int $b) {
-            $query = "insert into test(matricula, cash) values (?, ?)";
-            $arr = array($a, $b);
-            $req = $this->insert($query, $arr);
-            return $req;
-        }
-        public function getUser(int $b) {
-            $query = "select * from test where id = $b";
+        public function getProjectsByUser(int $id) {
+            $query = "select * from projects where project_user_creator = $id";
             $req = $this->select($query);
             return $req;
         }

@@ -7,17 +7,8 @@
         public function home() {
             $data["page_title"] = "Dasboard";
             $data["page_path"] = "Home";
+            $_SESSION["session_user"]["projects"] = $this->model->getProjectsByUser($_SESSION["session_user"]["profile"]["data"]["user_id"]);
             $this->views->getView($this, "home", $data);
-        } 
-
-        public function add() {
-            $data = $this->model->setUser("Simon", 5);
-            print_r($data);
-        }
-
-        public function get($id) {
-            $data = $this->model->getUser($id);
-            print_r($data);
         }
     }
     
