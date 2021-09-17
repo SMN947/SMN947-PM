@@ -42,7 +42,7 @@
 
       <!-- START Projects -->
       <?php foreach ($_SESSION["session_user"]["projects"]["data"] as $key => $value) { ?>
-      <div class="row">
+      <a class="row" href="<?= BASE_URL ?>/project/view/<?= $value["project_id"] ?>">
         <div class="card col-12 collapsed-card">
           <div class="card-header">
             <h3 class="card-title"><?= $value["project_name"] ?> - <?= $value["project_description"] ?></h3>
@@ -70,7 +70,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </a>
       <?php } ?>        
       <!-- END Projects -->        
 

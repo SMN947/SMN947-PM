@@ -4,6 +4,12 @@
             parent::__construct();
         }
 
+        public function view() {
+            $data["page_title"] = "Logout Page";
+            $data["page_path"] = "Home/Logout";
+            $this->views->getView($this, "view", $data);
+        }
+
         public function create() {
             $data["page_title"] = "Logout Page";
             $data["page_path"] = "Home/Logout";
