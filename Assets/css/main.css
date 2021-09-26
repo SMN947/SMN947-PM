@@ -3,6 +3,14 @@
 }
 pre {
     font-size: 10px;
-    padding: 0px;
-    border: solid 1px black;
+}
+fieldset {
+    min-width: auto;
+    padding: initial;
+    margin: initial;
+    border: solid 1px black ;
+}
+legend {
+    width: auto;
+    font-size: 18px;
 }

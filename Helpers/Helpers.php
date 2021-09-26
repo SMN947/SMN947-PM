@@ -1,8 +1,8 @@
 <?php
     function dep($data) {
-        $format = print_r("<pre>");
+        $format = print_r("<fieldset><legend> 🐞 Debug Data 👨‍💻</legend><pre>");
         $format .= print_r($data);
-        $format .= print_r("</pre>");
+        $format .= print_r("</pre></fieldset>");
         return $format;
     }
 

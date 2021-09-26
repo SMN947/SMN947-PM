@@ -1,7 +1,7 @@
 <?php
     session_start();
     date_default_timezone_set("America/Bogota");
-    const BASE_URL = "http://192.168.0.201/SMN947-PM";
+    const BASE_URL = "http://192.168.0.3/SMN947-PM";
     //Database
     const DB_HOST = "localhost";
     const DB_NAME = "smn947-pm";

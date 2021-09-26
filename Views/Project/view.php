@@ -7,8 +7,8 @@
 
             <!-- START Projects -->
             <?php 
-                foreach ($_SESSION["session_user"]["projects"]["data"] as $key => $value) { 
-                    if($value["project_id"] == 22) {          
+                foreach ($_SESSION["session_user"]["projects"]["data"] as $key => $value) {
+                    if($value["project_id"] == $data["projectId"]) {          
             ?>
             <div class="row" href="<?= BASE_URL ?>/project/view/<?= $value["project_id"] ?>">
                 <div class="card col-12">
@@ -27,7 +27,10 @@
                         </div>
                     </div>
                     <div class="card-header">
-                        AQUI VA EL PROGRESO :D
+                        <div class="progress">
+                            <?php $rand = rand(0, 100); ?>
+                            <div class="progress-bar" role="progressbar" style="width: <?= $rand ?>%" aria-valuenow="<?= $rand ?>" aria-valuemin="0" aria-valuemax="100"><?= $rand ?>%</div>
+                        </div>
                     </div>
                     <div class="card-body">
                         <div class="row">
@@ -36,14 +39,38 @@
                                 <div class="card-header" style="cursor: move;">
                                     <h3 class="card-title"><?= $value["column_name"] ?></h3>
                                     <div class="card-tools">
-                                        <a class="btn btn-tool clinfo" href="<?= BASE_URL ?>/project/create#Add Task Form"  data-toggle="modal" data-target="#exampleModal">
+                                        <a class="btn btn-tool clinfo" href="<?= BASE_URL ?>/project/add_task/<?= $value["column_id"] ?>#Add Task Form$"  data-toggle="modal" data-target="#exampleModal">
                                             <i class="fas fa-plus"></i>
                                             Add Task
                                         </a>
                                     </div>
                                 </div>
                                 <div class="card-body">
+                                     
                                     <!-- Load tasks here -->
+                                    <?php foreach ($value["tasks"] as $keyTask => $valueTask) { ?>
+                                    <div class="card col">
+                                        <div class="card-header" style="cursor: move;">
+                                            <h3 class="card-title">#<?= $valueTask["task_id"] ?> - <?= $valueTask["task_name"] ?> </h3>
+                                            <div class="card-tools">
+                                                <a class="btn btn-tool clinfo">
+                                                    <i class="fas fa-clock"></i>
+                                                    <?= $valueTask["task_end_sch"] ?>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="card-body">
+                                            <div class="progress">
+                                                <?php $rand = rand(0, 100); ?>
+                                                <div class="progress-bar" role="progressbar" style="width: <?= $rand ?>%" aria-valuenow="<?= $rand ?>" aria-valuemin="0" aria-valuemax="100"><?= $rand ?>%</div>
+                                            </div>
+                                            <!-- Load tasks here -->
+                                            <?= $valueTask["task_desc"] ?>
+                                        </div>
+                                    </div>
+                                    <?php } ?> 
+
+
                                 </div>
                             </div>
                             <?php } ?>    
