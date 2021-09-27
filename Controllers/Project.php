@@ -36,9 +36,7 @@
 
         public function add_task_save($params) {
             $res = $this->model->addTask($_GET['task-name'], $_GET['task-desc'], $_GET['task-start-sch'], $_GET['task-end-sch'], $_GET['task-project'], $_GET['task-column']);
-            //tasks(task_name, task_desc, task_start_sch, task_end_sch, task_project_id, task_column_id)
             header('Location: '.BASE_URL."/project/view/".$_GET["task-project"]); 
-            //http://192.168.0.102/SMN947-PM/project/view/24
         }
 
         //
@@ -47,5 +45,15 @@
             $data["page_path"] = "Home/Logout";
             $data["column_id"] = $params;
             $this->views->getView($this, "add_task", $data);
+        }
+
+        public function edit_task($params) {
+            $data["page_title"] = "Logout Page";
+            $data["page_path"] = "Home/Logout";
+            $data["params"] = $params;
+            $TaskData = json_decode($_GET['data']);
+            dep($_GET);
+            $res = $this->model->updateTask($TaskData->task_name, $TaskData->task_desc, $TaskData->task_start_sch, $TaskData->task_end_sch, $TaskData->task_project_id, $TaskData->task_column_id, $TaskData->task_id);
+            header('Location: '.BASE_URL."/project/view/".$_GET["task_project_id"]); 
         }
     }
