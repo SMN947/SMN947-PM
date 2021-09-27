@@ -15,7 +15,7 @@
               <h5 class="widget-user-desc"><?= $_SESSION["session_user"]["profile"]["data"]["user_email"] ?></h5>
             </div>
             <div class="widget-user-image">
-              <img class="img-circle elevation-2" src="<?= IMAGES ?>/user2-160x160.jpg" alt="User Avatar">
+              <img class="img-circle elevation-2" src="<?= RANDOM_PIC ?>" alt="User Avatar">
             </div>
             <div class="card-footer">
               <div class="row">
