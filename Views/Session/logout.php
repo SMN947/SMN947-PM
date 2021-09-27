@@ -1,6 +1,5 @@
 <?php session_destroy(); ?>
 <?= load_template("header", $data); ?>
-<?= load_template("sidebar", $data); ?>
 <?= load_template("navbar", $data); ?>
 
 

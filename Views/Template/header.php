@@ -13,5 +13,5 @@
   <link rel="stylesheet" href="<?= STYLES ?>/adminlte.css">
   <link rel="stylesheet" href="<?= STYLES ?>/main.css">
 </head>
-<body class="hold-transition sidebar-mini">
+<body class="hold-transition layout-top-nav layout-navbar-fixed layout-footer-fixed">
 <div class="wrapper">

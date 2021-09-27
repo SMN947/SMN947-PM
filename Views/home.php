@@ -1,5 +1,4 @@
 <?= load_template("header", $data); ?>
-<?= load_template("sidebar", $data); ?>
 <?= load_template("navbar", $data); ?>
 <div class="content-wrapper">
   <div class="content">
