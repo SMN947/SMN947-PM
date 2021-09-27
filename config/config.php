@@ -18,3 +18,4 @@
     const IMAGES = BASE_URL.'/Assets/images';
     const FONTS = BASE_URL.'/Assets/fonts';
 
+    const RANDOM_PIC = 'https://picsum.photos/200.jpg'; /*<?= IMAGES ?>/user2-160x160.jpg*/
