@@ -15,6 +15,8 @@
 
 <!-- jQuery -->
 <script src="<?= SCRIPTS ?>/jquery.min.js"></script>
+<!-- jQuery UI -->
+<script src="<?= SCRIPTS ?>/jqueryui.js"></script>
 <!-- Bootstrap 4 -->
 <script src="<?= SCRIPTS ?>/bootstrap.bundle.min.js"></script>
 <!-- AdminLTE App -->
