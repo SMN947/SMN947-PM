@@ -14,3 +14,41 @@ legend {
     width: auto;
     font-size: 18px;
 }
+
+
+.ghost {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    opacity: 0.4;
+    border-style: dashed;
+}
+
+.dragging {
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    transform: rotate(-5deg);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: 0.8;
+}
+
+.drag-place-holder {
+    height: 0px !important;
+    margin-top: -5px;
+    overflow: hidden;
+    border-bottom: 2px dashed blue;
+}
+.hidden {
+    display:none;
+}
+
+.task {
+    border: solid red 1px;
+    margin-bottom: 3px;
+}
+.project-column {
+    padding: 0px;
+    margin: 5px;
+}
+.project-column .card-body {
+    padding: 0px;
+}
