@@ -42,8 +42,14 @@ legend {
 }
 
 .task {
-    border: solid red 1px;
-    margin-bottom: 3px;
+    border: solid #b2b2b2 1px;
+    margin-bottom: 10px;
+    width: calc(100% - 10px);
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    box-shadow: 3px 3px 5px 0px #adb5bd
+}
 }
 .project-column {
     padding: 0px;
@@ -51,4 +57,7 @@ legend {
 }
 .project-column .card-body {
     padding: 0px;
+}
+.wrapper {
+    padding: 15px 0;
 }
