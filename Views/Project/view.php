@@ -35,7 +35,7 @@
                     <div class="card-body">
                         <div class="row">
                             <?php foreach ($value["columns"] as $key => $value) { ?>
-                            <div class="card col">
+                            <div class="card col project-column sortable-wrapper">
                                 <div class="card-header" style="cursor: move;">
                                     <h3 class="card-title"><?= $value["column_name"] ?></h3>
                                     <div class="card-tools">
@@ -45,17 +45,21 @@
                                         </a>
                                     </div>
                                 </div>
-                                <div class="card-body">
+                                <div class="card-body sortable" id="<?= $value["column_id"] ?>">
                                      
                                     <!-- Load tasks here -->
                                     <?php foreach ($value["tasks"] as $keyTask => $valueTask) { ?>
-                                    <div class="card col">
+                                    <div class="card col task" id="<?= $valueTask["task_id"] ?>">
                                         <div class="card-header" style="cursor: move;">
                                             <h3 class="card-title">#<?= $valueTask["task_id"] ?> - <?= $valueTask["task_name"] ?> </h3>
                                             <div class="card-tools">
                                                 <a class="btn btn-tool clinfo">
                                                     <i class="fas fa-clock"></i>
                                                     <?= $valueTask["task_end_sch"] ?>
+                                                </a>
+                                                <a class="btn btn-tool clinfo" href="<?= BASE_URL ?>/project/edit_task/<?= $value["column_id"] ?>#Edit Task Form$"  data-toggle="modal" data-target="#exampleModal">
+                                                    <i class="fas fa-pen"></i>
+                                                    Edit Task
                                                 </a>
                                             </div>
                                         </div>
@@ -65,6 +69,7 @@
                                                 <div class="progress-bar" role="progressbar" style="width: <?= $rand ?>%" aria-valuenow="<?= $rand ?>" aria-valuemin="0" aria-valuemax="100"><?= $rand ?>%</div>
                                             </div>
                                             <!-- Load tasks here -->
+                                            <input class="hidden" type="text" id="task_<?= $valueTask["task_id"] ?>" value='<?= json_encode($valueTask) ?>'>
                                             <?= $valueTask["task_desc"] ?>
                                         </div>
                                     </div>

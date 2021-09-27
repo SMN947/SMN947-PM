@@ -51,4 +51,11 @@
             $req = $this->insert($query, $arr);
             return $req;
         }
+
+        public function updateTask(string $name, string $desc, string $start, string $end, string $project, string $column, string $id) {
+            $query = "UPDATE tasks SET task_name=?,task_desc=?,task_start_sch=?,task_end_sch=?,task_project_id=?,task_column_id=? WHERE task_id = ?";
+            $arr = array($name, $desc, $start, $end, $project, $column, $id);
+            $req = $this->update($query, $arr);
+            return $req;
+        }
     }
