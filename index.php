@@ -2,7 +2,7 @@
     require_once("Config/config.php");
     require_once("Helpers/Helpers.php");
     echo "<script>var BASE_URL = '".BASE_URL."';</script>";
-    $url = !empty($_GET['url'])?$_GET['url']:'home/home';
+    $url = !empty($_GET['url'])?$_GET['url']:'Home/home';
     $arrUrl = explode("/", $url);
     $controller = $arrUrl[0];
     $method = $arrUrl[0];
