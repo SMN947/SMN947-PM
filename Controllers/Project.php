@@ -36,7 +36,7 @@
 
         public function add_task_save($params) {
             $res = $this->model->addTask($_GET['task-name'], $_GET['task-desc'], $_GET['task-start-sch'], $_GET['task-end-sch'], $_GET['task-project'], $_GET['task-column']);
-            header('Location: '.BASE_URL."/project/view/".$_GET["task-project"]); 
+            header('Location: '.BASE_URL."/Project/View/".$_GET["task-project"]); 
         }
 
         //
@@ -54,6 +54,6 @@
             $TaskData = json_decode($_GET['data']);
             dep($_GET);
             $res = $this->model->updateTask($TaskData->task_name, $TaskData->task_desc, $TaskData->task_start_sch, $TaskData->task_end_sch, $TaskData->task_project_id, $TaskData->task_column_id, $TaskData->task_id);
-            header('Location: '.BASE_URL."/project/view/".$_GET["task_project_id"]); 
+            header('Location: '.BASE_URL."/Project/View/".$_GET["task_project_id"]); 
         }
     }

@@ -2,7 +2,7 @@
 <div class="card card-outline card-primary">
   <div class="card-body">
     <p class="login-box-msg">Fill the following information</p>
-    <form action="<?= BASE_URL ?>/project/add_task_save/" method="get">
+    <form action="<?= BASE_URL ?>/Project/add_task_save/" method="get">
       <input name="task-project" class="hidden" value="<?= $_SESSION["session_user"]["current_project"] ?>">
       <input name="task-column" class="hidden" value='<?= $data["column_id"]?>'>
       <div class="input-group mb-3">

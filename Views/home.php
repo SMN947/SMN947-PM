@@ -41,7 +41,7 @@
 
       <!-- START Projects -->
       <?php foreach ($_SESSION["session_user"]["projects"]["data"] as $key => $value) { ?>
-      <a class="row" href="<?= BASE_URL ?>/project/view/<?= $value["project_id"] ?>">
+      <a class="row" href="<?= BASE_URL ?>/Project/View/<?= $value["project_id"] ?>">
         <div class="card col-12 collapsed-card">
           <div class="card-header">
             <h3 class="card-title"><?= $value["project_name"] ?> - <?= $value["project_description"] ?></h3>

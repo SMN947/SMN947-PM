@@ -17,7 +17,7 @@
             <a href="<?= BASE_URL ?>/" class="nav-link">Home</a>
           </li>
           <li class="nav-item">
-            <a href="<?= BASE_URL ?>/profile" class="nav-link">Profile</a>
+            <a href="<?= BASE_URL ?>/Profile" class="nav-link">Profile</a>
           </li>
         </ul>
       </div>
@@ -25,14 +25,14 @@
       <!-- Right navbar links -->
       <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
       <li class="nav-item">
-          <a class="nav-link clinfo" href="<?= BASE_URL ?>/project/create#Project Creation Form"  data-toggle="modal" data-target="#exampleModal">
+          <a class="nav-link clinfo" href="<?= BASE_URL ?>/Project/Create#Project Creation Form"  data-toggle="modal" data-target="#exampleModal">
               <i class="fas fa-plus"></i>
               Create project
           </a>
       </li>
 
       <li class="nav-item">
-          <a class="nav-link" href="<?= BASE_URL ?>/session/logout">
+          <a class="nav-link" href="<?= BASE_URL ?>/Session/Logout">
               <i class="fas fa-power-off"></i>
               Logout
           </a>

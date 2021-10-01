@@ -9,7 +9,7 @@
                 foreach ($_SESSION["session_user"]["projects"]["data"] as $key => $value) {
                     if($value["project_id"] == $data["projectId"]) {          
             ?>
-            <div class="row" href="<?= BASE_URL ?>/project/view/<?= $value["project_id"] ?>">
+            <div class="row" href="<?= BASE_URL ?>/Project/View/<?= $value["project_id"] ?>">
                 <div class="card col-12">
                     <div class="card-header">
                         <h3 class="card-title"><?= $value["project_name"] ?> - <?= $value["project_description"] ?></h3>
@@ -38,7 +38,7 @@
                                 <div class="card-header" style="cursor: move;">
                                     <h3 class="card-title"><?= $value["column_name"] ?></h3>
                                     <div class="card-tools">
-                                        <a class="btn btn-tool clinfo" href="<?= BASE_URL ?>/project/add_task/<?= $value["column_id"] ?>#Add Task Form$"  data-toggle="modal" data-target="#exampleModal">
+                                        <a class="btn btn-tool clinfo" href="<?= BASE_URL ?>/Project/add_task/<?= $value["column_id"] ?>#Add Task Form$"  data-toggle="modal" data-target="#exampleModal">
                                             <i class="fas fa-plus"></i>
                                             Add Task
                                         </a>
@@ -56,7 +56,7 @@
                                                     <i class="fas fa-clock"></i>
                                                     <?= $valueTask["task_end_sch"] ?>
                                                 </a>
-                                                <a class="btn btn-tool clinfo" href="<?= BASE_URL ?>/project/edit_task/<?= $value["column_id"] ?>#Edit Task Form$"  data-toggle="modal" data-target="#exampleModal">
+                                                <a class="btn btn-tool clinfo" href="<?= BASE_URL ?>/Project/edit_task/<?= $value["column_id"] ?>#Edit Task Form$"  data-toggle="modal" data-target="#exampleModal">
                                                     <i class="fas fa-pen"></i>
                                                     Edit Task
                                                 </a>

@@ -37,7 +37,7 @@ $(function () {
             var taskData = JSON.parse($("#task_"+taskId).val())
             taskData.task_column_id = newCol;
             console.log(`Task ${taskId} now in column ${newCol}`)
-            var URLUpdate = `${BASE_URL}/project/edit_task/${taskId}?data=${JSON.stringify(taskData)}`
+            var URLUpdate = `${BASE_URL}/Project/edit_task/${taskId}?data=${JSON.stringify(taskData)}`
             
             $.ajax(URLUpdate)
                 .done(function(a) {

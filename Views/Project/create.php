@@ -3,7 +3,7 @@
   <div class="card-body">
     <p class="login-box-msg">Sign in to start your session</p>
 
-    <form action="<?= BASE_URL ?>/project/create_save/" method="get">
+    <form action="<?= BASE_URL ?>/Project/create_save/" method="get">
       <div class="input-group mb-3">
         <input name="project-name" type="text" class="form-control" placeholder="Project Name">
       </div>
